@@ -4,7 +4,7 @@ import pandas as pd
 from pydantic import BaseModel
 
 # Load the saved Random Forest model
-with open("C:/Users/Administrator/Documents/kifiya/Week_4/notebooks/Random_Forest_24-09-2024-18-48-55.pkl", "rb") as model_file:
+with open("/app/notebooks/Random_Forest_24-09-2024-18-48-55.pkl", "rb") as model_file:
     model = pickle.load(model_file)
 
 # Create FastAPI instance
