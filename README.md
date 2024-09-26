@@ -61,7 +61,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/ElbetelTaye/Predictive_Pharmaceutical_data_analysis.git
+   git clone https://github.com/yohannestayez/Rossmann-Pharmaceuticals-Machine-Learning-Engineering2.git
    ```
 
 2. **Navigate into the project directory**:
@@ -83,13 +83,14 @@ The repository is structured as follows:
 ├── notebooks/
 │   ├── __init__.py
 │   ├── EDA.ipynb
-│   └── README.md
+│   └── Build_ML_model.ipynb
+│   └── DL_model.ipynb
 ├── tests/
 │   └── __init__.py
 ├── scripts/
     ├── __init__.py
-    ├── Data_cleaning_pipline.py
-    ├── visualize_data.py
+    ├── EDA_functions.py
+    ├── ML_pipeline_functions.py
     └── README.md
 
 ```
@@ -99,8 +100,26 @@ The repository is structured as follows:
    ```bash
    pip install -r requirements.txt
    ```
-
 5. **Run the project**
+
+
+6. **Create Docker container**
+
+```bash
+docker build -t app-name .
+
+docker run -p 80:80 app-name
+```
+
+7. **Create Heroku project**
+
+```bash
+heroku login
+heroku create your-app-name
+heroku git:remote your-app-name
+heroku stack:set container
+git push heroku main
+```
    ```
 
 ## Contributing
