@@ -110,7 +110,7 @@ docker build -t app-name .
 
 docker run -p 80:80 app-name
 ```
-  
+
 
 ## Contributing
 Contributions to improve the project are welcome! To contribute:
