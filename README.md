@@ -111,16 +111,7 @@ docker build -t app-name .
 docker run -p 80:80 app-name
 ```
 
-7. **Create Heroku project**
 
-```bash
-heroku login
-heroku create your-app-name
-heroku git:remote your-app-name
-heroku stack:set container
-git push heroku main
-```
-   
 
 ## Contributing
 Contributions to improve the project are welcome! To contribute:

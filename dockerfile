@@ -1,7 +1,20 @@
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
+# Use the official Python image
+FROM python:3.9
 
-COPY ./requirements.txt /app/requirements.txt
+# Set the working directory in the container
+WORKDIR /app
 
-RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
+# Copy the requirements.txt file into the container
+COPY requirements.txt .
 
-COPY ./app /app/app
+# Install the required packages
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the application code into the container
+COPY ./app ./app
+
+# Expose the port the app runs on
+EXPOSE 8000
+
+# Command to run the application with Uvicorn
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
