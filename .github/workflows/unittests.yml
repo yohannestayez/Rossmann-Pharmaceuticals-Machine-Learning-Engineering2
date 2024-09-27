@@ -1,5 +1,4 @@
 name: Python application
-
 on:
   push:
     branches: [ "main" ]  # Runs on push to the main branch
@@ -28,10 +27,6 @@ jobs:
         pip install flake8  # Install flake8 for linting
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi  # Install dependencies from requirements.txt if available
 
-   
-
-    - name: Test with unittest
+    -    - name: Test with unittest
       run: |
         python -m unittest discover  # Run unittests
-
-
